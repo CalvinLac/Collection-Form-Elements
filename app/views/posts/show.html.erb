@@ -1,0 +1,11 @@
+Title:<%= @post.title %>
+<br>
+Body:<%= @post.body %>
+<br>
+<br>
+<% @post.tags.each do |pt| %>
+  Tags:<%= pt.tagname %>
+  <br>
+<%end%>
+
+<%= link_to "Home", posts_path %>

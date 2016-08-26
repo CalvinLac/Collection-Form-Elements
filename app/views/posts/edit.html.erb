@@ -1,0 +1,9 @@
+<%= form_for @post do |p|%>
+Title:<%= p.text_field :title %>
+Body: <%= p.text_area :body %>
+
+<%= p.collection_check_boxes(:id, Tag.all, :id, :tagname) %>
+<%= p.collection_radio_buttons(:tags, Tag.all, :id, :tagname) %>
+
+<%= p.submit %>
+<%end%>

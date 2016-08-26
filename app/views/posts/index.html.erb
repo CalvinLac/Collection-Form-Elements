@@ -1,0 +1,7 @@
+<% @posts.each do |p| %>
+  <%= p.title %>
+  <%= p.body %>
+  <%= link_to "Show", edit_post_path(p) %>
+<%end%>
+
+<%= link_to "Create", new_post_path %>
